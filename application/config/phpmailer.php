@@ -1,9 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	
-				
-				
-				
-$config['Host'] = "smtp.nextuz.com";
+							
+$config['Host'] = "mail.nextuz.com";
 $config['SMTPDebug'] = 1;
 $config['SMTPSecure'] = "ssl";
 $config['SMTPAuth'] = TRUE;

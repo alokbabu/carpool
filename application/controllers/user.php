@@ -107,7 +107,7 @@ class User extends CI_Controller{
 		//validation rules
 		$this->form_validation->set_rules('firstname', 'First name', 'trim|required|alpha|xss_clean');
 		$this->form_validation->set_rules('lastname', 'Last Name', 'trim|required|alpha|xss_clean');
-		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[12]|alpha|callback_username_exists');
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[20]|alpha|callback_username_exists');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|trim|xss_clean');
 		$this->form_validation->set_rules('confpassword', 'Confirmation Password', 'trim|required|min_length[6]|xss_clean|matches[password]');
 		$this->form_validation->set_rules('datepicker', 'Birthday', 'required|trim|xss_clean');
@@ -262,8 +262,8 @@ class User extends CI_Controller{
 							
 				######################## - Php Mailer - ##########################
 				$mail = new PHPMailer(); 				
-				$mail->From     = "no-reply@carpool-us.com";
-				$mail->FromName   = "Carpool-US";
+				$mail->From     = "no-reply@nextuz.com";
+				$mail->FromName   = "Carpool";
 				
 				############### SMTP SETTINGS - GO DADDY #######################
 				$mail->IsSMTP(); // Telling PHP Mailer that is SMTP
